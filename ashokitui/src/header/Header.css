@@ -1,0 +1,32 @@
+.mainHeader{
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 600px;
+    padding-bottom: 5px;
+}
+
+.login{
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.login Button{
+    width: 80px;
+    height: 35px;
+    background: blue;
+    font-size: 25px;
+    border-radius: 10px;
+    color: white;
+}
