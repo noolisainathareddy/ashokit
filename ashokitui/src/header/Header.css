@@ -1,5 +1,6 @@
 .mainHeader{
     width: 100%;
+    font-size: 20px;
 }
 
 .header{
@@ -11,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 600px;
+    width: 800px;
     padding-bottom: 5px;
 }
 
@@ -30,3 +31,10 @@
     border-radius: 10px;
     color: white;
 }
+
+.login Button:hover{
+    background: orangered;
+    cursor: pointer;
+}
+
+

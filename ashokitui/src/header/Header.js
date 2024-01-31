@@ -18,7 +18,7 @@ const Header = () => {
                     <span>About US</span>
                 </div>
                 <div class="login">
-                    <Button>LogIn</Button>
+                    <a href="/login"><Button>LogIn</Button></a>
                 </div>
             </div>
         </div>
