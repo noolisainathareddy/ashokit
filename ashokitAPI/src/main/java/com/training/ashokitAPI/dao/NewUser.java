@@ -1,20 +1,22 @@
 package com.training.ashokitAPI.dao;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Getter
+@Setter
 public class NewUser {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer num;
+
+    @Column
     private String emailId;
 
     @Column(name="firstname")

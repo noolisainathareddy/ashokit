@@ -1,2 +1,13 @@
-package com.training.ashokitAPI.controller;public class HealthCheck {
+package com.training.ashokitAPI.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HealthCheck {
+
+    @GetMapping("/healthCheck")
+    public String adminPing(){
+        return "App is up and running";
+    }
 }
