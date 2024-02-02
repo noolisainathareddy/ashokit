@@ -11,10 +11,29 @@ const SignUp = () => {
         password: "",
         confirmPassword: ""
     })
+
+    const obj= {
+        "userId" : {
+            "emailId" : ""
+        },
+        "firstName" : "",
+        "lastName" : "",
+        "userName" : "",
+        "password" : "",
+        "confirmPassword" : ""
+    }
+
+    
     const onSubmitHandler = (e) => {
         e.preventDefault();
         console.log(info);
-        axios.post("http://localhost:8080/addNewUser", info).then((response) => {console.log(response)});
+        obj.userId.emailId = info.emailId; 
+        obj.firstName=info.firstName;
+        obj.lastName=info.lastName;
+        obj.userName=info.userName;
+        obj.password=info.password;
+        obj.confirmPassword=info.confirmPassword;
+        axios.post("http://localhost:8080/addNewUser", obj).then((response) => {console.log(response)});
     }
     const onChnageHandler = (e) => {
            setInfo({...info,[e.target.name]:e.target.value}); 
@@ -31,7 +50,7 @@ const SignUp = () => {
                         <input type="text" name="emailId" placeholder="Email Id" onChange={onChnageHandler}/><br/><br/>
                         <input type="password" name="password" placeholder="New Password" onChange={onChnageHandler}/><br/><br/>
                         <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange={onChnageHandler}/><br/><br/>
-                        <input type="submit" value="Create Account"/>
+                        <input id="submit" type="submit" value="Create Account"/>
                     </form>
                 </div>
             </div>
