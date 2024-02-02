@@ -12,21 +12,18 @@ import lombok.*;
 @Setter
 public class NewUser {
 
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Integer num;
 
-    @Column
-    private String emailId;
+    @EmbeddedId
+    private UserId userId;
+
+    @Column(name="username")
+    private String userName;
 
     @Column(name="firstname")
     private String firstName;
 
     @Column(name="lastname")
     private String lastName;
-
-    @Column(name="username")
-    private String userName;
 
     @Column(name="password")
     private String password;
