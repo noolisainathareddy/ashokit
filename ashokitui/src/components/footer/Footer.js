@@ -6,7 +6,7 @@ const Footer = () => {
             <div class="footer">
                 <div class="row1">
                     <div class="col1 row1-col">
-                        <img src="https://ashokitech.com/uploads/settings/general_settings_1639053735_1412244780.jpg"/><br/>
+                        <img src="https://ashokitech.com/uploads/settings/general_settings_1639053735_1412244780.jpg" alt="" /><br/>
                         <span>Ashok IT is a leading Indian IT training institute preparing tech-aspirants for flourishing careers in this challenging and competitive domain since 2020.</span>
                     </div>
                     <div class="col2 row1-col">

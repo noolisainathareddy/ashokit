@@ -1,8 +1,8 @@
 import './App.css';
-import Home from "./Home/Home";
+import Home from "./components/Home/Home.js";
 import {BrowserRouter, Route, Routes} from 'react-router-dom'; 
-import LogIn from './login/LogIn';
-import SignUp from './signup/SignUp';
+import LogIn from './components/login/LogIn.js';
+import SignUp from './components/signup/SignUp.js';
 
 function App() {
   return (
