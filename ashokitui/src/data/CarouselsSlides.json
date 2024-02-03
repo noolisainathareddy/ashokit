@@ -1,0 +1,17 @@
+{
+    "slides" : [
+        {
+            "src" : "https://ashokitech.com/uploads/banner/861619361_1706689802.jpg",
+            "alt" : "Image 1 for Carousel"
+        },
+        {
+            "src" : "https://ashokitech.com/uploads/banner/1157051454_1706689821.jpg",
+            "alt" : "Image 2 for Carousel"
+        },
+        {
+            "src" : "https://ashokitech.com/uploads/banner/1941900377_1706689842.jpg",
+            "alt" : "Image 3 for Carousel"
+        }
+
+    ]
+}

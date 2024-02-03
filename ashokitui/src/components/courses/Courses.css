@@ -16,6 +16,7 @@
 .course img{
     width: 250px;
     height: 200px;
+    border-radius: 10px;
 }
 
 .details{
@@ -24,9 +25,10 @@
 
 }
 .details Button{
-    background: orange;
+    background: rgb(72, 184, 89);
     border-radius: 5px;
     padding: 5px;
+    font-size: 15px;
 }
 
 .details Button:hover{
