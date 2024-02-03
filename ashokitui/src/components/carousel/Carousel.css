@@ -1,0 +1,40 @@
+.mainCarousel{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    align-items: center;
+}
+
+.arrow{
+    position: absolute;
+    width: 2em;
+    height: 2rem;
+    color: white;
+}
+
+.arrow-left{
+    left: 1rem;
+}
+
+.arrow-right{
+    right: 1rem;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.slide-hidden{
+    display: none;
+}
