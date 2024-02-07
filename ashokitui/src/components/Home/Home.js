@@ -4,6 +4,7 @@ import Courses from '../courses/Courses';
 import Footer from '../footer/Footer';
 import Carousel from '../carousel/Carousel';
 import slides from "../../data/CarouselsSlides.json";
+import StudentReview from '../reviews/StudentReview';
 
 const Home = () => {
     return(
@@ -11,6 +12,7 @@ const Home = () => {
             <Header/>
             <Carousel data={slides}/>
             <Courses/>
+            <StudentReview/>
             <Footer/>
         </div>
     )

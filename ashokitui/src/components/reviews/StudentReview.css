@@ -1,0 +1,59 @@
+.studentReviews{
+    width: 100%;
+    height: 600px;
+    background: #f9f7f5;
+    display: flex;
+    align-items: center;
+}
+
+.reviewContainer{
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+}
+
+.review1{
+    width: 400px;
+    height: 400px;
+    background: white;
+}
+
+.review2{
+    width: 400px;
+    height: 400px;
+    background: white;
+}
+
+.review3{
+    width: 400px;
+    height: 400px;
+    background: white;
+}
+
+.reviewHeader{
+    margin-top: 20px;
+    text-align: center;
+    height: 100px;
+}
+
+.reviewHeader h3{
+    font-size: 35px;
+}
+
+.reviewHeader h5{
+    font-size: 25px;
+    color: rgb(121, 125, 125);
+}
+
+.reviewContent{
+    padding: 15px;
+    font-size: 20px;
+}
+
+.reviewDate{
+    padding-top: 20px;
+    padding-right: 30px;
+    font-size: 20px;
+    text-align: right;
+}
