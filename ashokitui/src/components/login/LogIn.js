@@ -33,11 +33,17 @@ const LogIn = () => {
         console.log("Object : ", obj);
         try{
             console.log("came inside");
-            const {data} = await axios.post("http://localhost:8080/login",obj);
+            const {data} = await axios.request({
+                timeout: 1000,
+                method: "POST",
+                url:"http://localhost:8080/login",
+                data: obj
+            });
             setApiResponse(data);
         }catch(error){
             console.log('inside catch');
-            console.log('error.response :' ,error.response);
+            console.log("Error", error)
+            console.log('error.response :' ,error.message);
         }
     };
     return(
@@ -57,9 +63,7 @@ const LogIn = () => {
                 <div class="info">
                     <p>Ashok IT is a leading Indian IT training institute preparing tech-aspirants for flourishing careers in this challenging and competitive domain since 2020.</p>
                 </div>
-               
             </div>
-            
         </div>
     )
 }
