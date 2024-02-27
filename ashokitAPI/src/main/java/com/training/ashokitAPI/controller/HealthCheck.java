@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HealthCheck {
 
     @GetMapping("/healthCheck")
-    public String adminPing(){
+    public String adminPing() throws InterruptedException {
         return "App is up and running";
     }
 }
