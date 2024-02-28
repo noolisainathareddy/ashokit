@@ -14,6 +14,7 @@
     align-items: flex-end;
     width: 800px;
     padding-bottom: 5px;
+    padding-right: 20px;
 }
 
 .login{
@@ -22,6 +23,10 @@
     align-items: center;
     justify-content: center;
     
+}
+
+.insideLogIn{
+    display: none;
 }
 
 .login Button{

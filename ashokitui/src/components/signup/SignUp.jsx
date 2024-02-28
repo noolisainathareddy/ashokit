@@ -2,7 +2,10 @@ import { useState } from "react";
 import Header from "../header/Header";
 import "../signup/SignUp.css";
 import axios from "axios";
+import SignUpModal from "./SignUpModal";
 const SignUp = () => {
+    const[showModal, setShowModal] = useState(false);
+    const[apiResonse, setApiResponse] = useState('Empty');
     const[info, setInfo] = useState({
         firstName : "",
         lastName: "",
@@ -24,7 +27,7 @@ const SignUp = () => {
     }
 
     
-    const onSubmitHandler = (e) => {
+    const onSubmitHandler = async (e) => {
         e.preventDefault();
         console.log(info);
         obj.userId.emailId = info.emailId; 
@@ -33,16 +36,25 @@ const SignUp = () => {
         obj.userName=info.userName;
         obj.password=info.password;
         obj.confirmPassword=info.confirmPassword;
-        axios.post("http://localhost:8080/addNewUser", obj).then((response) => {console.log(response)});
+        try{
+          const {data} = await  axios.post("http://localhost:8080/addNewUser", obj);
+          console.log("Logging response", data);
+          setApiResponse(data);
+          setShowModal(true);
+        }catch(error){
+            console.log(error.response);
+        }
+        
+        
     }
     const onChnageHandler = (e) => {
            setInfo({...info,[e.target.name]:e.target.value}); 
     }
     return(
-        <div class="main-signup">
+        <div className="main-signup">
             <Header/>
-            <div class="singup">
-                <div class="signupform">
+            <div className="singup">
+                <div className="signupform">
                     <form onSubmit={onSubmitHandler}>
                         <input type="text" name="firstName" placeholder="First Name" onChange={onChnageHandler}/><br/><br/>
                         <input type="text" name="lastName" placeholder="Last Name" onChange={onChnageHandler}/><br/><br/>
@@ -54,6 +66,7 @@ const SignUp = () => {
                     </form>
                 </div>
             </div>
+            {showModal && <SignUpModal data={apiResonse}/>}
         </div>
     )
 }

@@ -5,12 +5,12 @@ import { Button } from 'react-bootstrap';
 
 const Header = () => {
     return(
-        <div class="mainHeader">
-            <div class="header">
-                <div class="logo">
+        <div className="mainHeader">
+            <div className="header">
+                <div className="logo">
                     <a href="/"><img src="https://ashokitech.com/uploads/settings/general_settings_1639053735_1412244780.jpg" alt=""/></a>
                 </div>
-                <div class="nav">
+                <div className="nav">
                     <span>Home</span>
                     <span>Services</span>
                     <span>Courses Offerings</span>
@@ -18,7 +18,7 @@ const Header = () => {
                     <span>Carrers</span>
                     <span>About US</span>
                 </div>
-                <div class="login">
+                <div className={ window.location.pathname === "/" ?  "login" : "insideLogIn" }>
                     <a href="/login"><Button>LogIn</Button></a>
                 </div>
             </div>

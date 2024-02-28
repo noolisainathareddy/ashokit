@@ -14,14 +14,14 @@ const Carousel = ({data}) => {
     }
 
     return(
-        <div class="mainCarousel">
-            <div class="carousel">
+        <div className="mainCarousel">
+            <div className="carousel">
 
-                <BsArrowLeftCircleFill class="arrow arrow-left"  onClick={prevSlide}/>
+                <BsArrowLeftCircleFill className="arrow arrow-left"  onClick={prevSlide}/>
                 {data.slides.map((item, index) => {
-                    return <img src={item.src} class={slide === index ? "slide" : "slide slide-hidden"}/>
+                    return <img src={item.src} className={slide === index ? "slide" : "slide slide-hidden"}/>
                 })} 
-                <BsArrowRightCircleFill  class="arrow arrow-right" onClick={nextSLide}/>                       
+                <BsArrowRightCircleFill  className="arrow arrow-right" onClick={nextSLide}/>                       
             </div> 
         </div>
     )
