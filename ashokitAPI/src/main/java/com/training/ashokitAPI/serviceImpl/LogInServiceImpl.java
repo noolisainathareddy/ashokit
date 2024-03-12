@@ -21,18 +21,15 @@ public class LogInServiceImpl implements LogInService {
         System.out.println("Inside LoginService");
         NewUser user = signUpRepository.getRec(logIn.getUserId().getEmailId());
         System.out.println(user);
-        if(user!=null){
+        if (user != null) {
             BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-            if(encoder.matches(logIn.getPassword(), user.getPassword()) ){
+            if (encoder.matches(logIn.getPassword(), user.getPassword())) {
                 return "Logged in Successfully";
-            }else{
+            } else {
                 throw new IncorrectPassword("Password is not matching", 403);
-//                return "Logged in failed";
             }
-        }else{
+        } else {
             throw new InvalidUserName("Please enter a valid user name", 403);
-//            return "Incorrect user name";
         }
-
     }
 }
