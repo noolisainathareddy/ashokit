@@ -12,8 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = {"http://localhost:3000"})
 public class SignUpController {
 
-    @Autowired
     private SignUp signUp;
+
+    @Autowired
+    public void setSignUp(SignUp signUp){
+        this.signUp=signUp;
+    }
     @PostMapping(value = "/addNewUser", consumes={"application/json"})
     public String SignUpRequest(@RequestBody NewUser newUser) {
         System.out.println(newUser);
